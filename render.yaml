@@ -1,0 +1,14 @@
+env:
+  - POSTGRES_HOST=<host_postgres>
+  - POSTGRES_PORT=5432
+  - POSTGRES_USER=<usuario>
+  - POSTGRES_PASSWORD=<senha>
+  - POSTGRES_DB=<base>
+  - USERS_JSON='{"admin":"admin_pass","analyst":"analyst_pass","reader":"reader_pass"}'
+  - SMTP_SERVER=<smtp_server>
+  - SMTP_PORT=587
+  - SMTP_USER=<smtp_user>
+  - SMTP_PASSWORD=<smtp_password>
+build:
+  - pip install -r requirements.txt
+start: streamlit run app.py
